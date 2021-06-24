@@ -1,16 +1,13 @@
 import React from 'react';
-import styled from '@emotion/styled'
 
-const AppContainer = styled.div``
+import styled from '@emotion/styled';
 
-function App() {
-  return (
-    <AppContainer>
-      <header className="App-header">
-        <p>Hello </p>
-      </header>
-    </AppContainer>
-  );
-}
+const AppContainer = styled.div``;
 
-export default App;
+export const App: React.FC = () => (
+  <AppContainer>
+    <header className="App-header">
+      <p>Hello </p>
+    </header>
+  </AppContainer>
+);
