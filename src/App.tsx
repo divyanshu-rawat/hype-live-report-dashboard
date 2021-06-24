@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 
 import styled from '@emotion/styled';
 
+import { EventsAggregateView } from './components/events-aggregate-view/events-aggregate-view';
+import { GlobalStyles } from './theme/global';
 import { fetchData } from './utils/index';
 
 const AppContainer = styled.div``;
@@ -15,9 +17,8 @@ export const App: React.FC = () => {
   }, []);
   return (
     <AppContainer>
-      <header className="App-header">
-        <p>Hello </p>
-      </header>
+      <GlobalStyles />
+      <EventsAggregateView />
     </AppContainer>
   );
 };

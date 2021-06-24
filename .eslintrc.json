@@ -38,12 +38,14 @@
                "allowExpressions": true
             }
         ],
-        "max-len": ["warn", { "code": 80 }],
+        "max-len": ["warn", { "code": 120 }],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
         "import/no-extraneous-dependencies": "off",
+        "react/jsx-indent" : "off",
+        "indent": "off",
         "import/order": [
             "error",
             {
