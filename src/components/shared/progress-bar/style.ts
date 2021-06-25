@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { progressBarHeight, progressBarSizeType } from './constant';
+
 type OutlineType = {
   width: number;
 };
@@ -9,13 +11,14 @@ export const Outline = styled.div<OutlineType>`
   width: ${({ width }) => width}px;
 `;
 
-type ProgressType = {
+export type ProgressType = {
   width: number;
+  type: progressBarSizeType;
 };
 
 export const Progress = styled.div<ProgressType>`
   background-color: rgb(62, 122, 235);
-  height: 24px;
+  height: ${({ type }) => progressBarHeight[type]}px;
   width: ${({ width }) => width}px;
   transition: 1s ease;
   transition-delay: 0.5s;

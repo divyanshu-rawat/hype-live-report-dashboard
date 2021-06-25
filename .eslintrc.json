@@ -45,6 +45,8 @@
         "react/prop-types": "off",
         "import/no-extraneous-dependencies": "off",
         "react/jsx-indent" : "off",
+        "react/jsx-indent-props": "off",
+        "react/jsx-props-no-spreading": "off",
         "indent": "off",
         "import/order": [
             "error",

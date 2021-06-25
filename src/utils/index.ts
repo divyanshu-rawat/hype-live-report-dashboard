@@ -1,4 +1,4 @@
-type eventType = {
+export type eventType = {
   displayName: string;
   participants: number;
   revenue: number;
