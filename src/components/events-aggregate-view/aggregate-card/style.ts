@@ -4,7 +4,7 @@ import { SubTitle } from '../../../theme/typography';
 import { UnitSold } from '../../shared/svg-icons/unit-sold';
 
 export const Outline = styled.div`
-  margin: 1rem 0;
+  margin: 1rem 1rem 1rem 0;
   padding: 1rem;
   height: 128px;
   width: 342px;

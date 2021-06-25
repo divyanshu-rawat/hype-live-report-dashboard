@@ -4,32 +4,22 @@ import styled from '@emotion/styled';
 
 import { EventsAggregateView } from './components/events-aggregate-view/events-aggregate-view';
 import { GlobalStyles } from './theme/global';
-import { eventType, fetchData } from './utils/index';
+import { fetchData, eventType } from './utils/index';
 
 const AppContainer = styled.div`
   width: 1086px;
   margin: 0 auto;
 `;
 
-interface IObjectKeys {
-  [key: string]: any;
-}
-
-const AggregateData = (events: eventType[], field: string): number => events
-  .map((o: IObjectKeys) => o[field])
-  .reduce((a, c) => a + c);
-
 export const App: React.FC = () => {
-  const [unitsSold, setUnitsSold] = useState(0);
+  const [events, setEvents] = useState<eventType[]>([]);
   useEffect(() => {
-    fetchData().then((events) => {
-      setUnitsSold(AggregateData(events, 'sellThrough'));
-    });
-  }, [unitsSold]);
+    fetchData().then((response) => setEvents(response));
+  }, [events]);
   return (
     <AppContainer>
       <GlobalStyles />
-      <EventsAggregateView aggregate={unitsSold} />
+      {events.length > 0 && <EventsAggregateView events={events} />}
     </AppContainer>
   );
 };

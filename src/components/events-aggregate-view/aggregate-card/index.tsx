@@ -4,16 +4,17 @@ import { PrimaryNumericTitle } from '../../../theme/typography';
 import { UnitSoldIcon, Outline, StyledSubTitle } from './style';
 
 type AggregateCardType = {
-    aggregate: number
+    aggregate: number,
+    title: string
 }
 
-export const AggregateCard: React.FC<AggregateCardType> = ({ aggregate }) => (
+export const AggregateCard: React.FC<AggregateCardType> = ({ aggregate, title }) => (
     <>
         <Outline>
             <UnitSoldIcon />
             <div>
                 <PrimaryNumericTitle>{aggregate}</PrimaryNumericTitle>
-                <StyledSubTitle>Units Sold</StyledSubTitle>
+                <StyledSubTitle>{title}</StyledSubTitle>
             </div>
         </Outline>
     </>
