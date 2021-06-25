@@ -16,7 +16,6 @@ export const AggregateCard: React.FC<AggregateCardType> = ({
 }) => (
     <>
         <Outline background={background}>
-            {/* <UnitSoldIcon /> */}
             <StyledIcon name={icon} fill={background} />
             <div>
                 <PrimaryNumericTitle>{icon === 'Dollar' ? `$ ${aggregate}` : aggregate}</PrimaryNumericTitle>
