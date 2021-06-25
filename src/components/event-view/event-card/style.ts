@@ -5,7 +5,7 @@ import { ProgressBar } from '../../shared/progress-bar';
 import { Icon } from '../../shared/svg-icons/icon';
 
 export const Outline = styled.div`
-  width: 260px;
+  width: 280px;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
   display: flex;

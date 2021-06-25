@@ -10,8 +10,7 @@ type OutlineType = {
 export const Outline = styled.div<OutlineType>`
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
-  height: 128px;
-  width: 260px;
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,7 +8,7 @@ export const PrimaryTitle = styled.h2`
 `;
 
 export const SecondaryTitle = styled.h2`
-  font-size: 18px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 700;
 `;

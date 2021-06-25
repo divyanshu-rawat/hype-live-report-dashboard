@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 import styled from '@emotion/styled';
 
-import { EventView } from './components/event-view/event-view';
-import { EventsAggregateView } from './components/events-aggregate-view/events-aggregate-view';
+import { EventView } from './components/event-view';
+import { EventsAggregateView } from './components/events-aggregate-view';
 import { GlobalStyles } from './theme/global';
 import { eventType } from './types/global';
 import { fetchData } from './utils/index';
 
 const AppContainer = styled.div`
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 `;
 
