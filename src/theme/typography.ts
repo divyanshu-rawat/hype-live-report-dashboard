@@ -4,10 +4,13 @@ export const PrimaryTitle = styled.h2`
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
-  line-height: 37px;
-  letter-spacing: 0em;
-  text-align: left;
   margin: 8px 0;
+`;
+
+export const SecondaryTitle = styled.h2`
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
 `;
 
 export const SubTitle = styled.p`

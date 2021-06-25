@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { SubTitle } from '../../../theme/typography';
 import { progressBarSizeType } from './constant';
@@ -11,15 +10,17 @@ type ProgressBarTypes = {
     type: progressBarSizeType;
 }
 
-export const ProgressBar: React.FC<ProgressBarTypes> = ({ width, percent, type }) => {
-    const [value, setValue] = React.useState(0);
+export const ProgressBar: React.FC<ProgressBarTypes> = ({
+    width, percent, type, ...rest
+}) => {
+    const [value, setValue] = useState(0);
 
     useEffect(() => {
         setValue(percent * width);
     }, [percent, width]);
 
     return (
-        <>
+        <div {...rest}>
             <LabelWrapper width={width}>
                 <SubTitle>Sell through</SubTitle>
                 <span>
@@ -30,7 +31,7 @@ export const ProgressBar: React.FC<ProgressBarTypes> = ({ width, percent, type }
             <Outline width={width}>
                 <Progress width={value} type={type} />
             </Outline>
-        </>
+        </div>
 
     );
 };
