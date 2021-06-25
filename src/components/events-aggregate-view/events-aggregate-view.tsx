@@ -4,15 +4,12 @@ import {
     lightGreen, lightBrown, lightBlue, lightRed,
 } from '../../theme/color';
 import { PrimaryTitle } from '../../theme/typography';
+import { EventsAggregateViewType } from '../../types/global';
 import { AppIcon } from '../../types/icon-types';
-import { AggregateData, AggregateUnitSold, eventType } from '../../utils/index';
+import { AggregateData, AggregateUnitSold } from '../../utils/index';
 import { ProgressBar } from '../shared/progress-bar';
 import { AggregateCard } from './aggregate-card';
 import { AggregateCardWrapper, Outline } from './style';
-
-type EventsAggregateViewType = {
-    events: eventType[]
-}
 
 export const EventsAggregateView: React.FC<EventsAggregateViewType> = ({ events }) => {
     const [aggregateData, setAggregateData] = useState({

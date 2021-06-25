@@ -5,7 +5,8 @@ import styled from '@emotion/styled';
 import { EventView } from './components/event-view/event-view';
 import { EventsAggregateView } from './components/events-aggregate-view/events-aggregate-view';
 import { GlobalStyles } from './theme/global';
-import { fetchData, eventType } from './utils/index';
+import { eventType } from './types/global';
+import { fetchData } from './utils/index';
 
 const AppContainer = styled.div`
   width: 1200px;
@@ -21,7 +22,7 @@ export const App: React.FC = () => {
     <AppContainer>
       <GlobalStyles />
       {events.length > 0 && <EventsAggregateView events={events} />}
-      {events.length > 0 && <EventView />}
+      {events.length > 0 && <EventView events={events} />}
     </AppContainer>
   );
 };

@@ -2,7 +2,9 @@ import React from 'react';
 
 import { green, brown, blue } from '../../../theme/color';
 import { SecondaryTitle, SubTitle } from '../../../theme/typography';
+import { eventType } from '../../../types/global';
 import { AppIcon } from '../../../types/icon-types';
+import { unitSold } from '../../../utils';
 import {
     Outline, StyledIcon, StyledProgressBar, TagRow, TagWrapper,
 } from './style';
@@ -20,15 +22,17 @@ const Tag: React.FC<TagType> = ({ name, count, fill }) => (
     </TagWrapper>
 );
 
-export const EventCard: React.FC = () => (
+export const EventCard: React.FC<eventType> = ({
+    sellThrough, revenue, participants, displayName, stock,
+}) => (
     <>
         <Outline>
-            <SecondaryTitle>350V2 BLACK KIDS</SecondaryTitle>
-            <StyledProgressBar width={220} percent={0.8} type="sm" />
+            <SecondaryTitle>{displayName}</SecondaryTitle>
+            <StyledProgressBar width={220} percent={sellThrough / 100} type="sm" />
             <TagRow>
-                <Tag name={AppIcon.UnitSold} fill={green} count={12.400} />
-                <Tag name={AppIcon.PeopleGroup} fill={brown} count={11.400} />
-                <Tag name={AppIcon.Dollar} fill={blue} count={12.400} />
+                <Tag name={AppIcon.UnitSold} fill={green} count={unitSold(sellThrough, stock)} />
+                <Tag name={AppIcon.PeopleGroup} fill={brown} count={participants} />
+                <Tag name={AppIcon.Dollar} fill={blue} count={revenue} />
             </TagRow>
         </Outline>
     </>
