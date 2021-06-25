@@ -1,19 +1,25 @@
 import * as React from 'react';
 
 import { PrimaryNumericTitle } from '../../../theme/typography';
-import { UnitSoldIcon, Outline, StyledSubTitle } from './style';
+import { AppIcon } from '../../../types/icon-types';
+import { Outline, StyledSubTitle, StyledIcon } from './style';
 
 type AggregateCardType = {
     aggregate: number,
-    title: string
+    title: string,
+    background: string,
+    icon: AppIcon
 }
 
-export const AggregateCard: React.FC<AggregateCardType> = ({ aggregate, title }) => (
+export const AggregateCard: React.FC<AggregateCardType> = ({
+    aggregate, title, background, icon,
+}) => (
     <>
-        <Outline>
-            <UnitSoldIcon />
+        <Outline background={background}>
+            {/* <UnitSoldIcon /> */}
+            <StyledIcon name={icon} fill={background} />
             <div>
-                <PrimaryNumericTitle>{aggregate}</PrimaryNumericTitle>
+                <PrimaryNumericTitle>{icon === 'Dollar' ? `$ ${aggregate}` : aggregate}</PrimaryNumericTitle>
                 <StyledSubTitle>{title}</StyledSubTitle>
             </div>
         </Outline>

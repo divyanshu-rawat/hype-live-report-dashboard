@@ -7,7 +7,7 @@ import { GlobalStyles } from './theme/global';
 import { fetchData, eventType } from './utils/index';
 
 const AppContainer = styled.div`
-  width: 1086px;
+  width: 1200px;
   margin: 0 auto;
 `;
 

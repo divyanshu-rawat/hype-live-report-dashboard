@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
 import { SubTitle } from '../../../theme/typography';
-import { UnitSold } from '../../shared/svg-icons/unit-sold';
+import { Icon } from '../../shared/svg-icons/icon';
 
-export const Outline = styled.div`
+type OutlineType = {
+  background: string;
+};
+
+export const Outline = styled.div<OutlineType>`
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
   height: 128px;
@@ -11,12 +15,18 @@ export const Outline = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(12, 168, 77, 0.4);
+  background: ${({ background }) => background};
 `;
 
-export const UnitSoldIcon = styled(UnitSold)`
+type StyledIconType = {
+  fill: string;
+};
+
+export const StyledIcon = styled(Icon)<StyledIconType>`
   height: 66px;
   width: 66px;
+  fill: ${({ fill }) => fill};
+  opacity: 0.5;
 `;
 
 export const StyledSubTitle = styled(SubTitle)`

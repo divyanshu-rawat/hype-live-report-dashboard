@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+import {
+    lightGreen, lightBrown, lightBlue, lightRed,
+} from '../../theme/color';
 import { PrimaryTitle } from '../../theme/typography';
+import { AppIcon } from '../../types/icon-types';
 import { AggregateData, AggregateUnitSold, eventType } from '../../utils/index';
 import { ProgressBar } from '../shared/progress-bar';
 import { AggregateCard } from './aggregate-card';
@@ -37,12 +41,32 @@ export const EventsAggregateView: React.FC<EventsAggregateViewType> = ({ events 
         <Outline>
             {' '}
             <PrimaryTitle>Summary</PrimaryTitle>
-            <ProgressBar width={1000} percent={aggregateSellThroughRate} type="md" />
+            <ProgressBar width={1200} percent={aggregateSellThroughRate} type="md" />
             <AggregateCardWrapper>
-                <AggregateCard aggregate={aggregateData.unitSold} title="Units Sold" />
-                <AggregateCard aggregate={aggregateData.participants} title="Participants" />
-                <AggregateCard aggregate={aggregateData.revenue} title="Revenue" />
-                <AggregateCard aggregate={aggregateData.cancellation} title="Cancellation" />
+                <AggregateCard
+                    aggregate={aggregateData.unitSold}
+                    title="Units Sold"
+                    background={lightGreen}
+                    icon={AppIcon.UnitSold}
+                />
+                <AggregateCard
+                    aggregate={aggregateData.participants}
+                    title="Participants"
+                    background={lightBrown}
+                    icon={AppIcon.PeopleGroup}
+                />
+                <AggregateCard
+                    aggregate={aggregateData.revenue}
+                    title="Revenue"
+                    background={lightBlue}
+                    icon={AppIcon.Dollar}
+                />
+                <AggregateCard
+                    aggregate={aggregateData.cancellation}
+                    title="Cancellation"
+                    background={lightRed}
+                    icon={AppIcon.Cross}
+                />
             </AggregateCardWrapper>
         </Outline>
     );
