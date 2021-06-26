@@ -8,10 +8,10 @@ exports[`matches snapshot 1`] = `
     Sale events
   </h2>
   <div
-    class="css-rtde4j"
+    class="css-fzdm0g"
   >
     <div
-      class="css-1iawshe"
+      class="css-1sr9ro9"
     >
       <h2
         class="css-lr3lix"
@@ -22,8 +22,8 @@ exports[`matches snapshot 1`] = `
         class="css-12xxxyo"
       >
         <div
-          class="css-1vwqbl"
-          width="245"
+          class="css-1685clg"
+          width="100%"
         >
           <p
             class="css-1ety6vy"
@@ -35,15 +35,10 @@ exports[`matches snapshot 1`] = `
           </span>
         </div>
         <div
-          class="css-dgxw77"
-          width="245"
-        >
-          <div
-            class="css-sfl3u"
-            type="sm"
-            width="225.89000000000001"
-          />
-        </div>
+          class="css-z2ugs0"
+          type="sm"
+          width="100%"
+        />
       </div>
       <div
         class="css-uf1ume"
