@@ -20,6 +20,7 @@
     },
     "rules": {
         "no-use-before-define": "off",
+        "arrow-parens": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "import/extensions": [

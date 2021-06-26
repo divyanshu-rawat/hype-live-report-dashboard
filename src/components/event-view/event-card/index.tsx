@@ -28,7 +28,7 @@ export const EventCard: React.FC<eventType> = ({
     <>
         <Outline>
             <SecondaryTitle>{displayName}</SecondaryTitle>
-            <StyledProgressBar width={245} percent={sellThrough / 100} type="sm" />
+            <StyledProgressBar percent={sellThrough / 100} type="sm" />
             <TagRow>
                 <Tag name={AppIcon.UnitSold} fill={green} count={unitSold(sellThrough, stock)} />
                 <Tag name={AppIcon.PeopleGroup} fill={brown} count={participants} />

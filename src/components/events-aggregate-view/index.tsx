@@ -23,7 +23,7 @@ export const EventsAggregateView: React.FC<EventsAggregateViewType> = ({ events 
         <Outline>
             {' '}
             <PrimaryTitle>Summary</PrimaryTitle>
-            <ProgressBar width={1100} percent={aggregateSellThroughRate} type="md" />
+            <ProgressBar percent={aggregateSellThroughRate} type="md" />
             <AggregateCardWrapper>
                 <AggregateCard
                     aggregate={unitSold}
