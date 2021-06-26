@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React, { HTMLAttributes } from 'react';
 
-type Props = HTMLAttributes<SVGElement>;
+type PropType = HTMLAttributes<SVGElement>;
 
-export const PeopleGroup: React.FC = ({ title = 'PeopleGroup', ...rest }: Props) => (
+export const PeopleGroup: React.FC<PropType> = ({ title = 'PeopleGroup', ...rest }) => (
 
     <svg viewBox="0 0 81 40" aria-label={title} xmlns="http://www.w3.org/2000/svg" {...rest}>
         <title>{title}</title>

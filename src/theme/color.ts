@@ -7,3 +7,4 @@ export const lightGrey = 'rgba(229, 229, 229, 1)';
 export const green = 'rgba(12, 168, 77, 1)';
 export const brown = 'rgba(136, 109, 76, 1)';
 export const blue = 'rgba(33, 150, 243, 1)';
+export const darkGrey = 'rgba(57, 61, 57, 1)';

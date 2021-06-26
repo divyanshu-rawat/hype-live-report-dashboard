@@ -29,7 +29,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run ci"
+            "pre-commit": "CI=true npm run test && npm run lint"
         }
     },
     "browserslist": {

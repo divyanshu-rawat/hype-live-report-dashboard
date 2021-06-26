@@ -12,7 +12,7 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "import", "react-hooks", "import"],
+    "plugins": ["react", "@typescript-eslint", "import", "react-hooks", "import", "jsx-a11y"],
     "settings": {
         "import/resolver": {
             "typescript": {}

@@ -12,12 +12,12 @@ import { AggregateCard } from './aggregate-card';
 import { AggregateCardWrapper, Outline } from './style';
 
 export const EventsAggregateView: React.FC<EventsAggregateViewType> = ({ events }) => {
-    const unitSold = aggregateUnitSold(events);
-    const participants = aggregateData(events, 'participants');
-    const revenue = aggregateData(events, 'revenue');
-    const aggregateStocks = aggregateData(events, 'stock');
-    const cancellation = aggregateStocks - unitSold;
-    const aggregateSellThroughRate = parseFloat((unitSold / aggregateStocks).toFixed(2));
+    const unitSold: number = aggregateUnitSold(events);
+    const participants: number = aggregateData(events, 'participants');
+    const revenue: number = aggregateData(events, 'revenue');
+    const aggregateStocks: number = aggregateData(events, 'stock');
+    const cancellation: number = aggregateStocks - unitSold;
+    const aggregateSellThroughRate: number = parseFloat((unitSold / aggregateStocks).toFixed(2));
 
     return (
         <Outline>

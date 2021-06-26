@@ -13,7 +13,7 @@ type ProgressBarTypes = {
 export const ProgressBar: React.FC<ProgressBarTypes> = ({
     width, percent, type, ...rest
 }) => {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState<number>(0);
 
     useEffect(() => {
         setValue(percent * width);

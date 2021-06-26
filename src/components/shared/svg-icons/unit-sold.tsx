@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React, { HTMLAttributes } from 'react';
 
-type Props = HTMLAttributes<SVGElement>;
+type PropType = HTMLAttributes<SVGElement>;
 
-export const UnitSold: React.FC = ({ title = 'UnitSold', ...rest }: Props) => (
+export const UnitSold: React.FC<PropType> = ({ title = 'UnitSold', ...rest }) => (
     <svg viewBox="0 0 68 68" fill="none" aria-label={title} xmlns="http://www.w3.org/2000/svg" {...rest}>
         <path
             d="M65.249 32.0333L35.8157 2.59999C34.5823 1.36666 32.8823 0.666656 31.1157 0.666656H7.21568C3.54901 0.666656 0.549011 3.66666 0.549011 7.33332V31.2333C0.549011 33 1.24901 34.7 2.51568

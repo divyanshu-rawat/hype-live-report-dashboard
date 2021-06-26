@@ -7,12 +7,12 @@ import { Dollar } from './dollar';
 import { PeopleGroup } from './people-group';
 import { UnitSold } from './unit-sold';
 
-type Props = {
+type PropType = {
     name: AppIcon;
 } & HTMLAttributes<SVGElement>;
 
 // eslint-disable-next-line consistent-return
-export const Icon: React.FC<Props> = ({ name, ...rest }: Props) => {
+export const Icon: React.FC<PropType> = ({ name, ...rest }) => {
     switch (name) {
         case AppIcon.UnitSold:
             return <UnitSold {...rest} />;

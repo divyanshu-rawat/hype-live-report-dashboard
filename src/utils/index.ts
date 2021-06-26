@@ -10,7 +10,7 @@ export const fetchData = async (): Promise<eventType[]> => {
   return (eventsJson as { data: eventType[] }).data;
 };
 
-export const aggregateData = (events: eventType[], field: string): number =>
+export const aggregateData = (events: eventType[], field: keyof eventType): number =>
   // eslint-disable-next-line implicit-arrow-linebreak
   events.map((o: IObjectKeys) => o[field]).reduce((a, c) => a + c);
 

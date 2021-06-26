@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React, { HTMLAttributes } from 'react';
 
-type Props = HTMLAttributes<SVGElement>;
+type PropType = HTMLAttributes<SVGElement>;
 
-export const Cross: React.FC = ({ title = 'Cross', ...rest }: Props) => (
+export const Cross: React.FC<PropType> = ({ title = 'Cross', ...rest }) => (
     <svg viewBox="0 0 68 68" aria-label={title} fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
         <title>{title}</title>
         <path d="M33.8823 0.666656C15.4489 0.666656 0.54895 15.5667 0.54895 34C0.54895 52.4333 15.4489 67.3333 33.8823 67.3333C52.3156 67.3333 67.2156 52.4333 67.2156 34C67.2156 15.5667 52.3156 0.666656 33.8823 0.666656ZM33.8823 60.6667C19.1823 60.6667 7.21562 48.7 7.21562 34C7.21562 19.3 19.1823 7.33332 33.8823 7.33332C48.5823 7.33332 60.549 19.3 60.549 34C60.549 48.7 48.5823 60.6667 33.8823 60.6667ZM45.849 17.3333L33.8823 29.3L21.9156 17.3333L17.2156 22.0333L29.1823 34L17.2156 45.9667L21.9156 50.6667L33.8823 38.7L45.849 50.6667L50.549 45.9667L38.5823 34L50.549 22.0333L45.849 17.3333Z" />
