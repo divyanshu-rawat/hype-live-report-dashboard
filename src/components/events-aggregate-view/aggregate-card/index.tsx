@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { PrimaryNumericTitle } from '../../../theme/typography';
-import { AppIcon } from '../../../types/icon-types';
+import { PrimaryNumericTitle } from 'theme/typography';
+import { AppIcon } from 'types/icon-types';
+
 import { Outline, StyledSubTitle, StyledIcon } from './style';
 
 type AggregateCardType = {

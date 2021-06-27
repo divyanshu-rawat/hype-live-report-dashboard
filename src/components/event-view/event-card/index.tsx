@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { green, brown, blue } from '../../../theme/color';
-import { SecondaryTitle, SubTitle } from '../../../theme/typography';
-import { eventType } from '../../../types/global';
-import { AppIcon } from '../../../types/icon-types';
-import { unitSold } from '../../../utils';
+import { green, brown, blue } from 'theme/color';
+import { SecondaryTitle, SubTitle } from 'theme/typography';
+import { eventType } from 'types/global';
+import { AppIcon } from 'types/icon-types';
+import { unitSold } from 'utils';
+
 import {
     Outline, StyledIcon, StyledProgressBar, TagRow, TagWrapper,
 } from './style';

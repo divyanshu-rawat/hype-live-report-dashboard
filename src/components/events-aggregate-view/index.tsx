@@ -2,11 +2,12 @@ import React from 'react';
 
 import {
     lightGreen, lightBrown, lightBlue, lightRed,
-} from '../../theme/color';
-import { PrimaryTitle } from '../../theme/typography';
-import { EventsAggregateViewType } from '../../types/global';
-import { AppIcon } from '../../types/icon-types';
-import { aggregateData, aggregateUnitSold } from '../../utils/index';
+} from 'theme/color';
+import { PrimaryTitle } from 'theme/typography';
+import { EventsAggregateViewType } from 'types/global';
+import { AppIcon } from 'types/icon-types';
+import { aggregateData, aggregateUnitSold } from 'utils/index';
+
 import { ProgressBar } from '../shared/progress-bar';
 import { AggregateCard } from './aggregate-card';
 import { AggregateCardWrapper, Outline } from './style';

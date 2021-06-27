@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { SubTitle } from '../../../theme/typography';
+import { SubTitle } from 'theme/typography';
+
 import { progressBarSizeType } from './constant';
 import { LabelWrapper, NewProgressBar } from './style';
 

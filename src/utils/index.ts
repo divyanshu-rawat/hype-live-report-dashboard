@@ -1,4 +1,4 @@
-import { eventType } from '../types/global';
+import { eventType } from 'types/global';
 
 interface IObjectKeys {
   [key: string]: any;
