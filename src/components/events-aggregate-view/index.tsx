@@ -43,6 +43,7 @@ export const EventsAggregateView: React.FC<EventsAggregateViewType> = ({ events 
                     title="Revenue"
                     background={lightBlue}
                     icon={AppIcon.Dollar}
+                    currencySymbol
                 />
                 <AggregateCard
                     aggregate={cancellation}
