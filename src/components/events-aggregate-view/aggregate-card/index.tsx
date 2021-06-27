@@ -19,7 +19,7 @@ export const AggregateCard: React.FC<AggregateCardType> = ({
             <StyledIcon name={icon} fill={background} />
             <div>
                 <PrimaryNumericTitle>{icon === 'Dollar' ? `$ ${aggregate}` : aggregate}</PrimaryNumericTitle>
-                <StyledSubTitle>{title}</StyledSubTitle>
+                <StyledSubTitle data-testid="AggregateCardTitle">{title}</StyledSubTitle>
             </div>
         </Outline>
     </>

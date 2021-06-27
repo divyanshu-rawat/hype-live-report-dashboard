@@ -2,13 +2,13 @@
 import React from 'react';
 
 import { PrimaryTitle } from '../../theme/typography';
-import { EventsAggregateViewType } from '../../types/global';
+import { EventsAggregateViewType as EventViewType } from '../../types/global';
 import { EventCard } from './event-card';
 import { EventsWrapper } from './style';
 
-export const EventView: React.FC<EventsAggregateViewType> = ({ events }) => (
+export const EventView: React.FC<EventViewType> = ({ events }) => (
     <>
-        <PrimaryTitle>Sale events</PrimaryTitle>
+        <PrimaryTitle data-testid="EventViewTitle">Sale events</PrimaryTitle>
         <EventsWrapper>
             {events && events.map(({ ...rest }, index) => <EventCard key={index} {...rest} />)}
         </EventsWrapper>

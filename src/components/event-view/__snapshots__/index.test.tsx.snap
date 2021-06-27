@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`should take a EventView snapshot 1`] = `
 <DocumentFragment>
   <h2
     class="css-lgmax0"
+    data-testid="EventViewTitle"
   >
     Sale events
   </h2>
@@ -15,6 +16,7 @@ exports[`matches snapshot 1`] = `
     >
       <h2
         class="css-lr3lix"
+        data-testid="EventCardTitle"
       >
         250v4 Rose Red Kids
       </h2>
@@ -30,7 +32,9 @@ exports[`matches snapshot 1`] = `
           >
             Sell through
           </p>
-          <span>
+          <span
+            data-testid="ProgressBarPercentage"
+          >
             92.2%
           </span>
         </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { EventCard } from '.';
+
+afterEach(cleanup);
 
 const sampleData = {
     displayName: '250v4 Rose Red Kids',
@@ -16,7 +18,12 @@ test('renders EventCard', () => {
     render(<EventCard {...sampleData} />);
 });
 
-it('matches snapshot', () => {
+test('title should equal to 250v4 Rose Red Kids', () => {
+    const { getByTestId } = render(<EventCard {...sampleData} />);
+    expect(getByTestId('EventCardTitle')).toHaveTextContent('250v4 Rose Red Kids');
+});
+
+it('should take a EventCard snapshot', () => {
     const { asFragment } = render(<EventCard {...sampleData} />);
     expect(asFragment()).toMatchSnapshot();
 });

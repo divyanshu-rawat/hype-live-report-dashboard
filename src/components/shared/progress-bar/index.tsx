@@ -13,7 +13,7 @@ export const ProgressBar: React.FC<ProgressBarTypes> = ({ percent, type, ...rest
     <div {...rest}>
         <LabelWrapper width="100%">
             <SubTitle>Sell through</SubTitle>
-            <span>
+            <span data-testid="ProgressBarPercentage">
                 {percent * 100}
                 %
             </span>

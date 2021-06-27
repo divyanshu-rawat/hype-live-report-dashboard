@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a ProgressBar snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-1685clg"
+      width="100%"
+    >
+      <p
+        class="css-1ety6vy"
+      >
+        Sell through
+      </p>
+      <span
+        data-testid="ProgressBarPercentage"
+      >
+        8000%
+      </span>
+    </div>
+    <div
+      class="css-h932pf"
+      type="md"
+      width="100%"
+    />
+  </div>
+</DocumentFragment>
+`;

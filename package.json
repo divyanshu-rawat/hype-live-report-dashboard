@@ -23,7 +23,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "npx eslint src/*",
+        "lint": "eslint \"src/*.{ts,tsx}\"",
         "lint:fix": "npx eslint src/* --fix",
         "ci": "CI=true npm run test && npm run lint"
     },

@@ -1,21 +1,22 @@
 import React from 'react';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 
 import { EventView } from '.';
 import { sampleData } from './constant';
+
+afterEach(cleanup);
 
 test('renders EventView', () => {
     render(<EventView events={sampleData} />);
 });
 
-test('renders Sale events h2', () => {
-    render(<EventView events={sampleData} />);
-    const headingElement = screen.getByText(/Sale events/i);
-    expect(headingElement).toBeInTheDocument();
+test('title should equal to Sale events', () => {
+    const { getByTestId } = render(<EventView events={sampleData} />);
+    expect(getByTestId('EventViewTitle')).toHaveTextContent('Sale events');
 });
 
-it('matches snapshot', () => {
+it('should take a EventView snapshot', () => {
     const { asFragment } = render(<EventView events={sampleData} />);
     expect(asFragment()).toMatchSnapshot();
 });
