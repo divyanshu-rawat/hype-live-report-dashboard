@@ -14,12 +14,15 @@ type TagType = {
     name: AppIcon;
     count: number;
     fill: string;
+    currencySymbol?: boolean;
 }
 
-const Tag: React.FC<TagType> = ({ name, count, fill }) => (
+const Tag: React.FC<TagType> = ({
+    name, count, fill, currencySymbol = false,
+}) => (
     <TagWrapper>
         <StyledIcon name={name} fill={fill} />
-        <SubTitle>{count}</SubTitle>
+        <SubTitle>{currencySymbol ? `$ ${count}` : count}</SubTitle>
     </TagWrapper>
 );
 
@@ -33,7 +36,7 @@ export const EventCard: React.FC<eventType> = ({
             <TagRow>
                 <Tag name={AppIcon.UnitSold} fill={green} count={unitSold(sellThrough, stock)} />
                 <Tag name={AppIcon.PeopleGroup} fill={brown} count={participants} />
-                <Tag name={AppIcon.Dollar} fill={blue} count={revenue} />
+                <Tag name={AppIcon.Dollar} fill={blue} count={revenue} currencySymbol />
             </TagRow>
         </Outline>
     </>

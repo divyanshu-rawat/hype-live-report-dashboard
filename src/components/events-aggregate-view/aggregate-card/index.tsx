@@ -9,17 +9,18 @@ type AggregateCardType = {
     aggregate: number,
     title: string,
     background: string,
-    icon: AppIcon
+    icon: AppIcon,
+    currencySymbol?: boolean
 }
 
 export const AggregateCard: React.FC<AggregateCardType> = ({
-    aggregate, title, background, icon,
+    aggregate, title, background, icon, currencySymbol = false,
 }) => (
     <>
         <Outline background={background}>
             <StyledIcon name={icon} fill={background} />
             <div>
-                <PrimaryNumericTitle>{icon === 'Dollar' ? `$ ${aggregate}` : aggregate}</PrimaryNumericTitle>
+                <PrimaryNumericTitle>{currencySymbol ? `$ ${aggregate}` : aggregate}</PrimaryNumericTitle>
                 <StyledSubTitle data-testid="AggregateCardTitle">{title}</StyledSubTitle>
             </div>
         </Outline>
