@@ -16,7 +16,7 @@ const AppContainer = styled.div`
 
 const Title = styled(PrimaryTitle)`
   text-align: center; 
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 export const App: React.FC = () => {
@@ -33,5 +33,3 @@ export const App: React.FC = () => {
     </AppContainer>
   );
 };
-
-
