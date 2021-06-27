@@ -1,6 +1,7 @@
 import { eventType } from 'types/global';
 
 interface IObjectKeys {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
