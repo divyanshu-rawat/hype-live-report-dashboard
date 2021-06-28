@@ -67,8 +67,18 @@ Manually trigger travis checks => `npm run ci`
 * DRY, KISS prinicple is well respected.
 * Rather than tests focusing on the implementation (Enzyme), tests are more focused on user behavior (react-testing-library).
 * Snapshot testing used to ensure UI does not change unexpectedly.
+* Responsive fluid design based on flex-box model.
 
 
+### Web Device
 
- <img src="https://i.imgur.com/zs7bsDv.png" alt="hype-live-report-dashboard">
+ <img src="https://i.imgur.com/zs7bsDv.png" alt="hype-live-report-dashboard-web">
+ 
+ ### Mobile Device
+ 
+ <img src="https://i.imgur.com/od7ejLv.png" alt="hype-live-report-dashboard-mobile">
+ 
+ ### Ipad Device
+ 
+  <img src="https://i.imgur.com/Th6P0gB.png" alt="hype-live-report-ipad">
 
