@@ -14,3 +14,8 @@ it('should take a App snapshot', () => {
   const { asFragment } = render(<App />);
   expect(asFragment()).toMatchSnapshot();
 });
+
+test('App Title should equal to Hype Live Report', () => {
+  const { getByTestId } = render(<App />);
+  expect(getByTestId('AppTitle')).toHaveTextContent('Hype Live Report');
+});
