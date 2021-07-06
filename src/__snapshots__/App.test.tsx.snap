@@ -7,6 +7,7 @@ exports[`should take a App snapshot 1`] = `
   >
     <h2
       class="css-ty6nqg"
+      data-testid="AppTitle"
     >
       Hype Live Report
     </h2>

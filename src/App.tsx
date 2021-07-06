@@ -27,7 +27,7 @@ export const App: React.FC = () => {
   return (
     <AppContainer>
       <GlobalStyles />
-      <Title>Hype Live Report</Title>
+      <Title data-testid="AppTitle">Hype Live Report</Title>
       {events.length > 0 && <EventsAggregateView events={events} />}
       {events.length > 0 && <EventView events={events} />}
     </AppContainer>
